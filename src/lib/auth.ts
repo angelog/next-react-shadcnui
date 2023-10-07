@@ -40,4 +40,7 @@ export const authOptions: NextAuthOptions = {
 	},
 	secret: process.env.SECRET_KEY,
 	debug: process.env.NODE_ENV !== 'production',
+	pages: {
+		signIn: '/login',
+	},
 }

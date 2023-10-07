@@ -57,7 +57,7 @@ export function UserLoginForm({ className, ...props }: UserAuthForm) {
 	}
 
 	return (
-		<div className={cn('grid gap-6', className)} {...props}>
+		<div className={cn('grid gap-6 w-80', className)} {...props}>
 			<form action="" onSubmit={onSubmit}>
 				<div className="grid gap-2">
 					<div className="grid gap-1">
@@ -67,7 +67,7 @@ export function UserLoginForm({ className, ...props }: UserAuthForm) {
 						<Input
 							id="email"
 							name="email"
-							placeholder="name@example.com"
+							placeholder="you@email.com"
 							type="email"
 							autoCapitalize="none"
 							autoComplete="email"
@@ -92,7 +92,10 @@ export function UserLoginForm({ className, ...props }: UserAuthForm) {
 							onChange={handlerOnChenge}
 						/>
 					</div>
-					<Button disabled={IsLoading}>
+					<Button
+						disabled={IsLoading}
+						className="bg-blue-600 hover:bg-blue-900  "
+					>
 						{IsLoading && (
 							<Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
 						)}

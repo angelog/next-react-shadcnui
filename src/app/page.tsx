@@ -1,13 +1,12 @@
-import { Button } from '@/components/ui/button'
-import { getCurrentUser } from '@/lib/session'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+	title: 'Dashboard',
+}
 
 export default async function Home() {
-	const user = await getCurrentUser()
 	return (
-		<div>
-			<h1>Home</h1>
-			<Button>Botão</Button>
-			<p>{JSON.stringify(user)}</p>
+		<div className=" bg-slate-300 h-full">
+			<h1>HOME</h1>
 		</div>
 	)
 }
